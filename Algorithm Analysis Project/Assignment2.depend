@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1464519672 source:/Users/arjaireynolds/QUT/2016/CAB301/Assignment2/main.cpp
+	<iostream>
+	<math.h>
+	<stdlib.h>
+	<iomanip>
+	<time.h>
+	<fstream>
+	<ctime>
+

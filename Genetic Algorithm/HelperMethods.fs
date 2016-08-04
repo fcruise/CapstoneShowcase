@@ -1,3 +1,8 @@
+/**
+* Written by James Galloway (n9198865) as part of his assessment for:
+* Queensland University of Technology - CAB402 - Programming Paradigms - Assignment 1
+*/
+
 ﻿namespace GeneticAlgorithm
 
 open System

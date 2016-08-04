@@ -1,0 +1,446 @@
+/* Authors: Lok Sum Lo (n9050159), Thiline Widanagamage (n9185691) */
+/* CAB230 Wec Computing Assignment, April 2016 */
+
+
+/* Sets background image and background related attributes across site. */
+body { 
+	background-image: url(images/background.png);
+	background-position: center 0%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-bottom: 30px;
+}
+
+
+/* Container for entire html document */
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Container for header area - including site title and menu */
+.header-cont {
+	width: 100%;
+	top: 0px;
+	position: fixed;
+	height: 70px;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+
+/* Modifies header elements spacing - title and menu buttons */
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* Site title text */
+.header h1 { 
+	padding: 10px;
+	margin: 5px;
+	font-family: Helvetica, serif;
+	text-align: left;
+	color: white; 
+}
+
+
+/* Menu buttons configuration */
+.nav a {
+	display: inline-block;
+	align: right;
+	font-family: Helvetica, serif;
+	font-size: 110%;
+	color: white;
+	letter-spacing: 3px;
+	padding: 25px;
+	text-decoration: none
+}
+
+
+/* Hover effect over menu buttons */
+.nav a:hover {
+	background-color: #05a991;
+	-webkit-transition: background-color 200ms linear;
+}
+
+
+/* Main area for displaying individual page content */
+.content {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+   /*  background-color: rgba(0, 0, 0, 0.3); */
+	height: auto;
+	padding-left: 20px;
+	color:white;
+	font-family: Helvetica, serif;
+	padding-bottom: 100px;
+}
+
+
+/* Page title */
+.content h1 {
+	font-size: 300%;
+}
+
+.content h2 {
+	font-size: 200%;
+}
+
+h2 {
+	letter-spacing: 2px;
+}
+
+#orLabel {
+	position: relative;
+	display: inline;
+	top: 30px;
+	left: 80px;
+}
+
+#submitLocation {
+	position: relative;
+	left: 110px;
+}
+
+#submitLogin {
+	position: relative;
+	left: 355px;
+}
+
+/* Index page title text position */
+.home {
+	padding-top: 180px;
+}
+
+
+/* Index page title text */
+.home h1 {
+	font-size: 500%;
+	line-height: 80%;
+}
+
+
+/* Index page tagline */
+#tagline {
+	position: relative;
+	bottom: 30px;
+	font-size: 120%;
+	font-family: cambria, georgia, helvetica;
+	/* font-style: italic; */
+}
+
+
+/* Index page search button */
+#searchNow {
+	color: white;
+	font-size: 120%;
+	letter-spacing: 3px;
+	text-decoration: none;
+	border-radius: 15px;
+	border: 3px solid white;
+	padding: 25px 40px;
+}
+
+
+/* Index page search button hover effect */
+#searchNow:hover {
+	background-color: black;
+	border: 3px solid black;
+	-webkit-transition: background-color 200ms linear;
+}
+
+
+/* Legend aesthetics for registration form */
+legend{
+	padding: 10px 15px;
+	border: 1px solid white;
+	font-family: helvetica, serif;
+	font-size: 150%;
+	letter-spacing: 3px;
+	font-weight: bold;
+}
+
+
+/* User input form positioning */
+form ul {
+	list-style-type: none;
+	position: relative;
+	left: 280px;
+}
+
+
+/* User input form items */
+li {
+	padding: 10px;
+	letter-spacing: 2px;
+	font-size: 110%;
+}
+
+
+/* User input - input fields */
+form input {
+	position: relative;
+	left: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 20px;
+}
+
+
+/* Search page - suburb list */
+#searchFormList {
+	position: relative;
+	left: 0px;
+	padding: 10px;
+	margin: 10px;
+}
+
+#searchFormList input, select {
+	position: absolute;
+	left: 145px;
+}
+
+#searchFormList label {
+	position: relative;
+	/* left: 30px; */
+	margin: 10px 0px 10px 150px;
+	font-size: 90%;
+}
+
+#searchFormList input[type="checkbox"] {
+	margin-top: 3px;
+}
+
+/* Button style for forms */
+.submitButton {
+	background:none;
+	color: white;
+	border: 2px solid white;
+	padding: 20px;
+	margin: 15px 0px;
+	font-family: Helvetica, serif;
+	letter-spacing: 2px;
+	font-size: 110%;
+	position: relative;
+	left: 300px;
+}
+
+.submitButton:hover {
+	background: black;
+	border: 2px solid black;
+	-webkit-transition: background-color 200ms linear;
+}
+
+#searchAgain {
+	position: relative;
+	top: 50px;
+}
+
+
+/* Site footer box */
+.footer {
+	font-family: Helvetica, serif;
+	font-size: 75%;
+    background-color: black;
+	position: fixed;
+    height: 25px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	padding-top: 15px;
+	text-align: right;
+}
+
+.footer a {
+	display: inline;
+	color: white;
+	padding: 15px;
+}
+
+
+/* Wrapper centres the content of the site - includes body of html */
+.wrapper {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+	font-family: Arial;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+#headings {
+	font-size: 30px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #ffffff; 
+	text-align: left;
+}
+
+td {
+	padding: 10px 0px 10px 10px;
+}
+
+table a {
+	color: white;
+	font-size: 120%;
+}
+
+tr:nth-child(even) {background-color: rgba(0, 0, 0, .5)}
+
+
+.parkInfo ul {
+	list-style-type: none;
+}
+
+.userComments {
+	font-size: 90%;
+	position: relative;
+	left: 50px;
+}
+
+.userCommentsInner {
+	background-color: rgba(0, 0, 0, .5);
+	margin: 20px 0px 20px 0px;
+	padding: 5px 10px 5px 10px;
+}
+
+.userComments ul {
+	list-style-type: none;
+
+}
+
+.userComments li {
+	letter-spacing: 0px;
+	padding-top: 0px;
+}
+
+.userComments h3 {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+
+textarea {
+position: relative;
+left: 50px;
+}
+
+#submitComment {
+	position: relative;
+	left:650px;
+}
+
+#submitSearch {
+	position: relative;
+	display: inline;
+	left: 50px;
+	top: 30px;
+}
+
+.errorMessage {
+	color: red;
+	font-size: 130%;
+	letter-spacing: 1px;
+}
+
+.errorMsgSmall{
+	color: red;
+	font-size: 80%;
+	position: relative;
+	left: 30px;
+}
+
+.searchCriteria {
+	letter-spacing: 2px;
+}
+
+#map {
+	height: 400px;
+	width: 600px;
+	position: relative;
+	left: 100px;
+	color: black;
+}
+
+#mapSearch {
+	height: 400px;
+	width: 600px;
+	position: relative;
+	left: 100px;
+	color: black;
+}
+
+
+/* Resizeable for smaller screens  (incomplete) */
+
+/* 
+	#mobileMenu {
+		display: none;
+		align: right;
+		font-family: Helvetica, serif;
+		font-size: 110%;
+		color: white;
+		letter-spacing: 3px;
+		padding: 25px;	
+	}
+
+	#mobileMenu:hover {
+		background-color: #05a991;
+		-webkit-transition: background-color 200ms linear;
+	}
+
+	@media screen and (max-width: 900px){
+	.nav {
+		margin-top: 70px;
+		float:right;
+		clear: both;
+		display: inline-block;
+	}
+	
+	.nav a {
+		width: 100%;
+		float: right;
+		clear: both;
+		background-color: black;
+		border: 1px solid white;
+		padding: 15px;
+		text-align: center;
+	}
+	
+	.header h1 {
+		font-size: 130%;
+		padding-top: 15px;
+		-webkit-transition: font-size 200ms linear
+	}
+	
+	#mobileMenu {
+		display: inline-block;
+	}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+

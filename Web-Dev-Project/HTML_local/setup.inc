@@ -1,0 +1,10 @@
+<?php
+	try {
+		$pdo = new PDO('mysql:host=localhost;dbname=dogparkdb', 'root', 'mammies123');
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$result = $pdo->query('SELECT ParkName, Street, Suburb FROM parks');
+	}
+	catch (PDOException $e){
+		echo $e->getMessage();
+	}
+?>

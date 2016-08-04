@@ -1,0 +1,159 @@
+<!--  Authors: Lok Sum Lo (n9050159), Thiline Widanagamage (n9185691) -->
+<!--  CAB230 Wec Computing Assignment, April 2016 -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search for a dog park</title>
+		<meta charset="UTF-8"> 
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="scripts.js"></script>
+	</head>
+	
+
+	<body>
+	
+	<!-- search by SUBURB (drop down list), NAME (text box), RATING, or LOCATION -->
+	
+		<div class="container">
+			<?php include 'menu.inc' ?>
+			
+			<div class="wrapper">
+				<div class="content">
+					<h1>Search</h1>
+					<form>
+						<ul id="searchFormList">
+							<li>Park name:<input type="text" pattern="[\ a-zA-Z0-9]*" name="parkName" title="Please only use letters (A-Z) and numbers (0-9)."></li>
+
+							<li>Rating:
+							<select>
+							<option disabled selected value>Select a rating</option>
+								<option value=1>1/5</option>
+								<option value=2>2/5</option>
+								<option value=3>3/5</option>
+								<option value=4>4/5</option>
+								<option value=5>5/5</option>
+							</select>
+							<li>Suburb:
+							<select>
+								<option disabled selected value>Select a suburb</option>
+								<option value=1>Acacia Ridge</option>
+								<option value=2>Albion</option>
+								<option value=3>Alderley</option>
+								<option value=4>Algester</option>
+								<option value=5>Ashgrove</option>
+								<option value=6>Aspley</option>
+								<option value=7>Bald Hills</option>
+								<option value=8>Bellbowrie</option>
+								<option value=9>Boondall</option>
+								<option value=10>Bracken Ridge</option>
+								<option value=11>Bridgeman Downs</option>
+								<option value=12>Brighton</option>
+								<option value=13>Brookfield</option>
+								<option value=14>Bulimba</option>
+								<option value=15>Calamvale</option>
+								<option value=16>Cannon Hill</option>
+								<option value=17>Carindale</option>
+								<option value=18>Carole Park</option>
+								<option value=19>Carseldine</option>
+								<option value=20>Chapel Hill</option>
+								<option value=21>Chermside</option>
+								<option value=22>Chermside West</option>
+								<option value=23>Clayfield</option>
+								<option value=24>Coopers Plains</option>
+								<option value=25>Coorparoo</option>
+								<option value=26>Corinda</option>
+								<option value=27>Durack</option>
+								<option value=28>Dutton Park</option>
+								<option value=29>East Brisbane</option>
+								<option value=30>Everton Park</option>
+								<option value=31>Fairfield</option>
+								<option value=32>Ferny Grove</option>
+								<option value=33>Fig Tree Pocket</option>
+								<option value=34>Forest Lake</option>
+								<option value=35>Gordon Park</option>
+								<option value=36>Graceville</option>
+								<option value=37>Grange</option>
+								<option value=38>Hamilton</option>
+								<option value=39>Herston</option>
+								<option value=40>Inala</option>
+								<option value=41>Jamboree Hts</option>
+								<option value=42>Jindalee</option>
+								<option value=43>Kangaroo Point</option>
+								<option value=44>Karana Downs</option>
+								<option value=45>Kedron</option>
+								<option value=46>Kelvin Grove</option>
+								<option value=47>Keperra</option>
+								<option value=48>Kuraby</option>
+								<option value=49>Lota</option>
+								<option value=50>Macgregor</option>
+								<option value=51>Manly West</option>
+								<option value=52>Mansfield</option>
+								<option value=53>Milton</option>
+								<option value=54>Morningside</option>
+								<option value=55>New Farm</option>
+								<option value=56>Norman Park</option>
+								<option value=57>Northgate</option>
+								<option value=58>Nudgee</option>
+								<option value=59>Nudgee Beach</option>
+								<option value=60>Nundah</option>
+								<option value=61>Oxley</option>
+								<option value=62>Paddington</option>
+								<option value=63>Pallara</option>
+								<option value=64>Parkinson</option>
+								<option value=65>Red Hill</option>
+								<option value=66>Richlands</option>
+								<option value=67>Riverhills</option>
+								<option value=68>Rocklea</option>
+								<option value=69>Runcorn</option>
+								<option value=70>Salisbury</option>
+								<option value=71>Sandgate</option>
+								<option value=72>Sinnamon Park</option>
+								<option value=73>Stafford</option>
+								<option value=74>Stafford Hts</option>
+								<option value=75>Sunnybank</option>
+								<option value=76>Svtn Mile Rocks</option>
+								<option value=77>Tarragindi</option>
+								<option value=78>The Gap</option>
+								<option value=79>Tingalpa</option>
+								<option value=80>Toowong</option>
+								<option value=81>Upr Kedron</option>
+								<option value=82>Upr Mt Gravatt</option>
+								<option value=83>Virginia</option>
+								<option value=84>Wakerley</option>
+								<option value=85>Wavell Heights</option>
+								<option value=86>West End</option>
+								<option value=87>Windsor</option>
+								<option value=88>Wishart</option>
+								<option value=89>Wynnum</option>
+								<option value=90>Wynnum West</option>
+								<option value=91>Yeronga</option>
+								<option value=92>Zillmere</option>
+							</select>
+							</li>
+							<li>Park size: </br><input type="checkbox" name="small" value="small"><label>Small  (Less than 2000m&sup2;)</label></br>
+								<input type="checkbox" name="medium" value="med"><label>Medium  (2000m&sup2; to 6000m&sup2;)</label></br>
+								<input type="checkbox" name="large" value="large"><label>Large  (More than 6000m&sup2;)</label>
+							</li>
+							
+						</ul> <!-- searchFormList -->
+						<!-- <input type="submit" class="submitButton" value="SEARCH" id="submitSearch"> -->
+						<!-- PLACEHOLDER BUTTON: --> 
+						<a type="submit" class="submitButton" value="SEARCH" id="submitSearch" href="search_results.html" style="text-decoration:none;top:30px;">SEARCH</a>
+						<label id="orLabel">O R</label>
+						<a type="button" class="submitButton" value="LOCATION" id="submitLocation" onclick="getLocation()" style="text-decoration:none;top:30px;">SEARCH BY CURRENT LOCATION</a>
+
+					</form>
+				</div> <!-- content -->
+			</div> <!-- wrapper -->
+		 </div> <!-- container -->
+		 
+		 <div class="footer">
+			<a>About</a>
+			<a>Contact us</a>
+		 </div> <!-- footer -->
+	
+	</body>
+	
+</html>

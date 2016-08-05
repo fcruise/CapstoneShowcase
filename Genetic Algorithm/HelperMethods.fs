@@ -65,7 +65,6 @@ module HelperMethods =
 
 
     let LogAverageFitness genNum gen =
-        let fullPath = "C:\Users\Owner\Dropbox\Uni\CAB402 - Programming Paradigms\Assignment2\GeneticAlgorithm\GeneticAlgorithm\logs\AverageFitness.csv"
         use wr = new StreamWriter(fullPath, true)
         PrevAvg <- (GetTotalFitness gen) / float gen.Count
         let log = String.Format("{0},{1}", genNum, PrevAvg)

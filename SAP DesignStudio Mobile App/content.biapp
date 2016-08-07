@@ -1,0 +1,476 @@
+<bi:biapp bi:version="1600" xmlns:bi="http://xml.sap.com/2011/biml/biapp" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/TR/REC-html40" xmlns:h="http://www.w3.org/TR/REC-html40" xmlns:sdk1="com.sap.ip.bi" sdk1:version="16.1">
+	<bi:component name="APPLICATION_PROPERTIES" type="APPLICATION_PROPERTIES">
+		<bi:property name="THEME" value="aad_mobile"/>
+		<bi:property name="CUSTOM_CSS" value="app_mobile.css"/>
+		<bi:property name="MESSAGE_TYPES" value="NONE"/>
+	</bi:component>
+	<bi:data_source_alias name="DBI_SALES_COMPANY" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_CONNECTION" value="BI73-09"/>
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value="MU0R1M_Q1"/>
+			<bi:property name="DATA_SOURCE_INITIAL_STATE">
+				<bi:value><![CDATA[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]]></bi:value>
+			</bi:property>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:data_source_alias name="DBI_SALES_CUSTOMER" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_CONNECTION" value="BI73-09"/>
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value="MU0R1M_Q1"/>
+			<bi:property name="DATA_SOURCE_INITIAL_STATE">
+				<bi:value><![CDATA[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]]></bi:value>
+			</bi:property>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:data_source_alias name="DBI_SALES_CUSTOMER_YEAR" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_CONNECTION" value="BI73-09"/>
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value="MU0R1M_Q1"/>
+			<bi:property name="DATA_SOURCE_INITIAL_STATE">
+				<bi:value><![CDATA[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]]></bi:value>
+			</bi:property>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:data_source_alias name="DBI_SALES_PRODUCT" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_CONNECTION" value="BI73-09"/>
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value="MU0R1M_Q1"/>
+			<bi:property name="DATA_SOURCE_INITIAL_STATE">
+				<bi:value><![CDATA[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]]></bi:value>
+			</bi:property>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:data_source_alias name="DBI_SALES_PRODUCT_YEAR" type="QUERY_DATA_SOURCE">
+		<bi:property name="DATA_SOURCE_DEFINITION">
+			<bi:property name="DATA_SOURCE_CONNECTION" value="BI73-09"/>
+			<bi:property name="DATA_SOURCE_TYPE" type="CHOICE" value="QUERY"/>
+			<bi:property name="DATA_SOURCE_NAME" value="MU0R1M_Q1"/>
+			<bi:property name="DATA_SOURCE_INITIAL_STATE">
+				<bi:value><![CDATA[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]]></bi:value>
+			</bi:property>
+		</bi:property>
+	</bi:data_source_alias>
+	<bi:component name="ROOT" type="ABSOLUTE_LAYOUT_COMPONENT">
+		<bi:component name="PAGEBOOK_1" type="PAGEBOOK_COMPONENT">
+			<bi:property name="TOP_MARGIN" value="-2"/>
+			<bi:property name="WIDTH" value="auto"/>
+			<bi:property name="HEIGHT" value="auto"/>
+			<bi:property name="LEFT_MARGIN" value="20"/>
+			<bi:property name="RIGHT_MARGIN" value="20"/>
+			<bi:property name="BOTTOM_MARGIN" value="20"/>
+			<bi:component name="PAGE_1" type="PAGE_COMPONENT">
+				<bi:component name="PNL_HEAD" type="PANEL_COMPONENT">
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="HEIGHT" value="80"/>
+					<bi:property name="CSS_STYLE" value="background-color: #121d37;"/>
+					<bi:component name="TEXT_1" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Global Bike Inc. Mobile App"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 150%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="10"/>
+					</bi:component>
+					<bi:component name="TEXT_3" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Corporate Sales Totals"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 100%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="TXT_SIDEPANEL" type="TEXT_COMPONENT">
+					<bi:property name="TEXT" value="Filter Panel"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="CSS_STYLE" value="filter:flipv fliph;  &#13;&#10; writing-mode:tb-rl;  &#13;&#10; color:#333333;  &#13;&#10; font-size:14px;  &#13;&#10; text-align:center;  &#13;&#10; height:90%;&#13;&#10; z-index:10;"/>
+					<bi:property name="WIDTH" value="20"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="CSS_CLASS" value="txtPanel"/>
+				</bi:component>
+				<bi:component name="PNL_PG1_NAV" type="PANEL_COMPONENT">
+					<bi:property name="TOP_MARGIN" value="80"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="40"/>
+					<bi:property name="CSS_CLASS" value="slideout"/>
+					<bi:component name="PNL_PG1_FLTR" type="FILTERPANEL_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="-300"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_COMPANY"/>
+						<bi:property name="FILTERPANEL_TITLE" value="Filter By:"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="MEMBER_DISPLAY" value="TEXT"/>
+						<bi:property name="RIGHT_MARGIN" value="40"/>
+						<bi:property name="CSS_CLASS" value="fltrPanel"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="PNL_CHART" type="PANEL_COMPONENT">
+					<bi:property name="LEFT_MARGIN" value="25"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="50"/>
+					<bi:component name="INFOCHART_1" type="com_sap_ip_bi_InfoChart">
+						<bi:property name="TOP_MARGIN" value="-4"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_COMPANY"/>
+						<bi:property name="CHARTTYPE" type="CHOICE" value="info/line">
+							<bi:property name="info/line">
+								<bi:property name="properties" value="">
+									<bi:property name="title" value="">
+										<bi:property name="visible" value=""/>
+									</bi:property>
+									<bi:property name="plotArea" value="">
+										<bi:property name="dataLabel" value="">
+											<bi:property name="visible" value=""/>
+										</bi:property>
+									</bi:property>
+									<bi:property name="legend" value="">
+										<bi:property name="isScrollable" value="X"/>
+									</bi:property>
+									<bi:property name="legendGroup" value="">
+										<bi:property name="layout" value="">
+											<bi:property name="position" value="bottom"/>
+										</bi:property>
+										<bi:property name="forceToShow" value="X"/>
+									</bi:property>
+									<bi:property name="general" value="">
+										<bi:property name="background" value="">
+											<bi:property name="border" value="">
+												<bi:property name="bottom" value="">
+													<bi:property name="visible" value=""/>
+												</bi:property>
+											</bi:property>
+										</bi:property>
+									</bi:property>
+									<bi:property name="valueAxis" value="">
+										<bi:property name="axisLine" value="">
+											<bi:property name="visible" value="X"/>
+										</bi:property>
+									</bi:property>
+								</bi:property>
+							</bi:property>
+						</bi:property>
+						<bi:property name="cvombinding" value="{&quot;chartType&quot;:&quot;info/timeseries_line&quot;,&quot;binding&quot;:[{&quot;source&quot;:[&quot;0CALYEAR&quot;],&quot;feed&quot;:&quot;timeAxis&quot;},{&quot;source&quot;:[&quot;MU0CUST__0COUNTRY&quot;],&quot;feed&quot;:&quot;color&quot;},{&quot;source&quot;:[&quot;00O2TG7BHMMV76BLZVX509XFD&quot;],&quot;feed&quot;:&quot;valueAxis&quot;}]}"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="HEIGHT" value="auto"/>
+						<bi:property name="RIGHT_MARGIN" value="81"/>
+						<bi:property name="CSS_CLASS" value="chart"/>
+						<bi:property name="LEFT_MARGIN" value="9"/>
+						<bi:property name="BOTTOM_MARGIN" value="54"/>
+					</bi:component>
+					<bi:component name="CHART_TYPE_PICKER_1" type="CHART_TYPE_PICKER_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="auto"/>
+						<bi:property name="TOP_MARGIN" value="25"/>
+						<bi:property name="HEIGHT" value="500"/>
+						<bi:property name="RIGHT_MARGIN" value="18"/>
+						<bi:property name="CHART_TYPE_PICKER_REF" value="INFOCHART_1"/>
+						<bi:property name="WIDTH" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="IMAGE_1" type="IMAGE_COMPONENT">
+					<bi:property name="IMAGE" value="gbi_logo.bmp"/>
+					<bi:property name="BOTTOM_MARGIN" value="5"/>
+					<bi:property name="TOP_MARGIN" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="5"/>
+					<bi:property name="LEFT_MARGIN" value="auto"/>
+				</bi:component>
+			</bi:component>
+			<bi:component name="PAGE_2" type="PAGE_COMPONENT">
+				<bi:component name="PANEL_1" type="PANEL_COMPONENT">
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="HEIGHT" value="80"/>
+					<bi:property name="CSS_STYLE" value="background-color: #121d37;"/>
+					<bi:component name="TEXT_2" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Global Bike Inc. Mobile App"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 150%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="10"/>
+					</bi:component>
+					<bi:component name="TEXT_4" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Customer Sales Totals"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 100%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="TEXT_5" type="TEXT_COMPONENT">
+					<bi:property name="TEXT" value="Filter Panel"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="CSS_STYLE" value="filter:flipv fliph;  &#13;&#10; writing-mode:tb-rl;  &#13;&#10; color:#333333;  &#13;&#10; font-size:14px;  &#13;&#10; text-align:center;  &#13;&#10; height:90%;&#13;&#10; z-index:10;"/>
+					<bi:property name="WIDTH" value="20"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="CSS_CLASS" value="txtPanel"/>
+				</bi:component>
+				<bi:component name="PANEL_2" type="PANEL_COMPONENT">
+					<bi:property name="TOP_MARGIN" value="80"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="40"/>
+					<bi:property name="CSS_CLASS" value="slideout"/>
+					<bi:component name="FILTERPANEL_1" type="FILTERPANEL_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="-300"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_CUSTOMER"/>
+						<bi:property name="FILTERPANEL_TITLE" value="Filter By:"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="MEMBER_DISPLAY" value="TEXT"/>
+						<bi:property name="RIGHT_MARGIN" value="40"/>
+						<bi:property name="CSS_CLASS" value="fltrPanel"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="PANEL_3" type="PANEL_COMPONENT">
+					<bi:property name="LEFT_MARGIN" value="25"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="HEIGHT" value="600"/>
+					<bi:component name="INFOCHART_2" type="com_sap_ip_bi_InfoChart">
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_CUSTOMER"/>
+						<bi:property name="CHARTTYPE" type="CHOICE" value="info/column">
+							<bi:property name="info/column">
+								<bi:property name="properties" value="">
+									<bi:property name="title" value="">
+										<bi:property name="visible" value=""/>
+									</bi:property>
+									<bi:property name="plotArea" value="">
+										<bi:property name="dataLabel" value="">
+											<bi:property name="visible" value=""/>
+										</bi:property>
+									</bi:property>
+									<bi:property name="legend" value="">
+										<bi:property name="isScrollable" value="X"/>
+									</bi:property>
+									<bi:property name="legendGroup" value="">
+										<bi:property name="layout" value="">
+											<bi:property name="position" value="bottom"/>
+										</bi:property>
+										<bi:property name="forceToShow" value="X"/>
+									</bi:property>
+									<bi:property name="general" value="">
+										<bi:property name="background" value="">
+											<bi:property name="border" value="">
+												<bi:property name="bottom" value="">
+													<bi:property name="visible" value=""/>
+												</bi:property>
+											</bi:property>
+										</bi:property>
+									</bi:property>
+									<bi:property name="valueAxis" value="">
+										<bi:property name="axisLine" value="">
+											<bi:property name="visible" value="X"/>
+										</bi:property>
+									</bi:property>
+								</bi:property>
+							</bi:property>
+						</bi:property>
+						<bi:property name="cvombinding" value="{&quot;chartType&quot;:&quot;info/timeseries_line&quot;,&quot;binding&quot;:[{&quot;source&quot;:[&quot;0CALYEAR&quot;],&quot;feed&quot;:&quot;timeAxis&quot;},{&quot;source&quot;:[&quot;MU0CUST__0COUNTRY&quot;],&quot;feed&quot;:&quot;color&quot;},{&quot;source&quot;:[&quot;00O2TG7BHMMV76BLZVX509XFD&quot;],&quot;feed&quot;:&quot;valueAxis&quot;}]}"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="HEIGHT" value="600"/>
+						<bi:property name="RIGHT_MARGIN" value="81"/>
+						<bi:property name="CSS_CLASS" value="chart"/>
+						<bi:property name="LEFT_MARGIN" value="9"/>
+						<bi:property name="onSelect">
+							<bi:value><![CDATA[DBI_SALES_CUSTOMER_YEAR.setFilter("MU0CUST", INFOCHART_2.getSelectedMembers("MU0CUST"));
+CROSSTAB_1.setVisible(true);]]></bi:value>
+						</bi:property>
+					</bi:component>
+					<bi:component name="CHART_TYPE_PICKER_2" type="CHART_TYPE_PICKER_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="auto"/>
+						<bi:property name="TOP_MARGIN" value="25"/>
+						<bi:property name="HEIGHT" value="500"/>
+						<bi:property name="RIGHT_MARGIN" value="18"/>
+						<bi:property name="CHART_TYPE_PICKER_REF" value="INFOCHART_2"/>
+						<bi:property name="WIDTH" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="IMAGE_2" type="IMAGE_COMPONENT">
+					<bi:property name="IMAGE" value="gbi_logo.bmp"/>
+					<bi:property name="BOTTOM_MARGIN" value="5"/>
+					<bi:property name="TOP_MARGIN" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="5"/>
+					<bi:property name="LEFT_MARGIN" value="auto"/>
+				</bi:component>
+				<bi:component name="PANEL_4" type="PANEL_COMPONENT">
+					<bi:property name="TOP_MARGIN" value="710"/>
+					<bi:property name="HEIGHT" value="200"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="80"/>
+					<bi:property name="LEFT_MARGIN" value="25"/>
+					<bi:component name="CROSSTAB_1" type="CROSSTAB_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="100"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_CUSTOMER_YEAR"/>
+						<bi:property name="CROSSTAB_PIXEL_SCROLL_MODE_ROW_LIMIT" value="1"/>
+						<bi:property name="RIGHT_MARGIN" value="0"/>
+						<bi:property name="VISIBLE" value=""/>
+						<bi:property name="SCALING_FACTORS_VISIBLE" value=""/>
+						<bi:property name="CROSSTAB_PIXEL_SCROLL_MODE_COL_LIMIT" value="6"/>
+					</bi:component>
+				</bi:component>
+			</bi:component>
+			<bi:component name="PAGE_3" type="PAGE_COMPONENT">
+				<bi:component name="TEXT_8" type="TEXT_COMPONENT">
+					<bi:property name="TEXT" value="Filter Panel"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="CSS_STYLE" value="filter:flipv fliph;  &#13;&#10; writing-mode:tb-rl;  &#13;&#10; color:#333333;  &#13;&#10; font-size:14px;  &#13;&#10; text-align:center;  &#13;&#10; height:90%;&#13;&#10; z-index:10;"/>
+					<bi:property name="WIDTH" value="20"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="CSS_CLASS" value="txtPanel"/>
+				</bi:component>
+				<bi:component name="PANEL_5" type="PANEL_COMPONENT">
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="HEIGHT" value="80"/>
+					<bi:property name="CSS_STYLE" value="background-color: #121d37;"/>
+					<bi:component name="TEXT_6" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Global Bike Inc. Mobile App"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 150%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="10"/>
+					</bi:component>
+					<bi:component name="TEXT_7" type="TEXT_COMPONENT">
+						<bi:property name="TEXT" value="Product Sales Totals"/>
+						<bi:property name="LEFT_MARGIN" value="20"/>
+						<bi:property name="STYLE" value="HEADING1"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="CSS_STYLE" value="font-family: &quot;verdana&quot;, sans-serif;&#13;&#10;font-size: 100%;&#13;&#10;text-align: center;&#13;&#10;"/>
+						<bi:property name="CSS_CLASS" value="txtHeading"/>
+						<bi:property name="RIGHT_MARGIN" value="20"/>
+						<bi:property name="TOP_MARGIN" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="PANEL_6" type="PANEL_COMPONENT">
+					<bi:property name="TOP_MARGIN" value="80"/>
+					<bi:property name="HEIGHT" value="auto"/>
+					<bi:property name="BOTTOM_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="40"/>
+					<bi:property name="CSS_CLASS" value="slideout"/>
+					<bi:component name="FILTERPANEL_2" type="FILTERPANEL_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="-300"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_PRODUCT"/>
+						<bi:property name="FILTERPANEL_TITLE" value="Filter By:"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="MEMBER_DISPLAY" value="TEXT"/>
+						<bi:property name="RIGHT_MARGIN" value="40"/>
+						<bi:property name="CSS_CLASS" value="fltrPanel"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="PANEL_7" type="PANEL_COMPONENT">
+					<bi:property name="LEFT_MARGIN" value="25"/>
+					<bi:property name="TOP_MARGIN" value="100"/>
+					<bi:property name="RIGHT_MARGIN" value="0"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="HEIGHT" value="600"/>
+					<bi:component name="INFOCHART_3" type="com_sap_ip_bi_InfoChart">
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_PRODUCT"/>
+						<bi:property name="CHARTTYPE" type="CHOICE" value="info/column">
+							<bi:property name="info/column">
+								<bi:property name="properties" value="">
+									<bi:property name="title" value="">
+										<bi:property name="visible" value=""/>
+									</bi:property>
+									<bi:property name="plotArea" value="">
+										<bi:property name="dataLabel" value="">
+											<bi:property name="visible" value=""/>
+										</bi:property>
+									</bi:property>
+									<bi:property name="legend" value="">
+										<bi:property name="isScrollable" value="X"/>
+									</bi:property>
+									<bi:property name="legendGroup" value="">
+										<bi:property name="layout" value="">
+											<bi:property name="position" value="bottom"/>
+										</bi:property>
+										<bi:property name="forceToShow" value="X"/>
+									</bi:property>
+									<bi:property name="general" value="">
+										<bi:property name="background" value="">
+											<bi:property name="border" value="">
+												<bi:property name="bottom" value="">
+													<bi:property name="visible" value=""/>
+												</bi:property>
+											</bi:property>
+										</bi:property>
+									</bi:property>
+									<bi:property name="valueAxis" value="">
+										<bi:property name="axisLine" value="">
+											<bi:property name="visible" value="X"/>
+										</bi:property>
+									</bi:property>
+								</bi:property>
+							</bi:property>
+						</bi:property>
+						<bi:property name="cvombinding" value="{&quot;chartType&quot;:&quot;info/timeseries_line&quot;,&quot;binding&quot;:[{&quot;source&quot;:[&quot;0CALYEAR&quot;],&quot;feed&quot;:&quot;timeAxis&quot;},{&quot;source&quot;:[&quot;MU0CUST__0COUNTRY&quot;],&quot;feed&quot;:&quot;color&quot;},{&quot;source&quot;:[&quot;00O2TG7BHMMV76BLZVX509XFD&quot;],&quot;feed&quot;:&quot;valueAxis&quot;}]}"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="HEIGHT" value="600"/>
+						<bi:property name="RIGHT_MARGIN" value="81"/>
+						<bi:property name="CSS_CLASS" value="chart"/>
+						<bi:property name="LEFT_MARGIN" value="9"/>
+						<bi:property name="onSelect">
+							<bi:value><![CDATA[DBI_SALES_PRODUCT_YEAR.setFilter("MU0MATM", INFOCHART_3.getSelectedMembers("MU0MATM"));
+CROSSTAB_2.setVisible(true);]]></bi:value>
+						</bi:property>
+					</bi:component>
+					<bi:component name="CHART_TYPE_PICKER_3" type="CHART_TYPE_PICKER_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="auto"/>
+						<bi:property name="TOP_MARGIN" value="25"/>
+						<bi:property name="HEIGHT" value="500"/>
+						<bi:property name="RIGHT_MARGIN" value="18"/>
+						<bi:property name="CHART_TYPE_PICKER_REF" value="INFOCHART_3"/>
+						<bi:property name="WIDTH" value="50"/>
+					</bi:component>
+				</bi:component>
+				<bi:component name="IMAGE_3" type="IMAGE_COMPONENT">
+					<bi:property name="IMAGE" value="gbi_logo.bmp"/>
+					<bi:property name="BOTTOM_MARGIN" value="5"/>
+					<bi:property name="TOP_MARGIN" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="5"/>
+					<bi:property name="LEFT_MARGIN" value="auto"/>
+				</bi:component>
+				<bi:component name="PANEL_8" type="PANEL_COMPONENT">
+					<bi:property name="TOP_MARGIN" value="710"/>
+					<bi:property name="HEIGHT" value="200"/>
+					<bi:property name="WIDTH" value="auto"/>
+					<bi:property name="RIGHT_MARGIN" value="80"/>
+					<bi:property name="LEFT_MARGIN" value="25"/>
+					<bi:property name="CSS_STYLE" value="align: center;"/>
+					<bi:component name="CROSSTAB_2" type="CROSSTAB_COMPONENT">
+						<bi:property name="LEFT_MARGIN" value="100"/>
+						<bi:property name="WIDTH" value="auto"/>
+						<bi:property name="DATA_SOURCE_ALIAS_REF" value="DBI_SALES_CUSTOMER_YEAR"/>
+						<bi:property name="CROSSTAB_PIXEL_SCROLL_MODE_ROW_LIMIT" value="1"/>
+						<bi:property name="RIGHT_MARGIN" value="0"/>
+						<bi:property name="VISIBLE" value=""/>
+						<bi:property name="SCALING_FACTORS_VISIBLE" value=""/>
+						<bi:property name="CROSSTAB_PIXEL_SCROLL_MODE_COL_LIMIT" value="6"/>
+					</bi:component>
+				</bi:component>
+			</bi:component>
+		</bi:component>
+	</bi:component>
+</bi:biapp>

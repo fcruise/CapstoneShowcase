@@ -1,0 +1,74 @@
+.txtHeading {
+	text-align: middle
+	font-size: 250%;
+	font-family: verdana
+}
+
+.sapzencrosstab-Crosstab {
+    background-color: #ffffff;
+    font-size: 8pt;
+    background: white;
+}
+
+.slideout {
+     position: fixed;
+     top: 80px;
+     left:0;
+     width: 15px;
+     padding: 12px 0;
+     text-align: center;
+     background: #626774;
+     -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -o-transition-duration: 0.3s;
+     -webkit-border-radius: 0 5px 5px 0;
+     -moz-border-radius: 0 5px 5px 0;
+     border-radius: 0 5px 5px 0;
+     cursor:pointer;
+     height:90% !important;
+	 z-index: 1
+ }
+
+ .slideout_inner {
+     position: fixed;
+     top: 42px;
+     left: -300px;
+     height:93% !important;
+     background: #626774;
+     padding: 5px;
+     -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     -o-transition-duration: 0.3s;
+     text-align: left;
+     -webkit-border-radius: 0 0 5px 0;
+     -moz-border-radius: 0 0 5px 0;
+     border-radius: 0 0 5px 0;
+	 z-index: 2
+ }
+
+ .slideout:hover, .slideout:focus {
+     left: 300px;
+ }
+
+ .slideout:hover .slideout_inner, .slideout:focus .slideout_inner {
+     left: 0;
+ }
+ 
+ .chart {
+ 	z-index: 0;
+ }
+
+.txtPanel {
+	 z-index:5;
+	 font-size: 10pt;
+}
+
+.fltrPanel .sapUiTv {
+    font-size: 10pt;
+}
+
+.fltrPanel .sapUiBtnS {
+    font-size: 8pt;
+}

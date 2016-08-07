@@ -1,0 +1,99 @@
+#header {
+    font-family: "Verdana", serif;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#nav {
+    font-family: "Verdana", serif;
+    line-height:30px;
+    background-color:#eeeeee;
+    height:680;
+    width:100px;
+    float:left;
+    margin-right:50px;
+    padding:10px;
+
+}
+
+#info {
+    font-family: "Verdana, serif;"
+    margin-right: 100px;
+
+    padding-left: 200px;
+    min-height: 600px;
+    background-image: url(wifi.gif);
+    background-position: right;
+    background-repeat: repeat-y,
+}
+
+
+}
+#container {
+  margin: auto;
+  width: 70%;
+  padding: 10px
+}
+
+#footer {
+    position: fixed;
+    font-family: "Verdana, serif;"
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding: inherit;
+}
+
+#form {
+    font-family: "Verdana, serif;"
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+li a {
+  font-family: "Verdana", serif;
+
+    float:left;
+    display: block;
+    color: #000;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+h1 {
+    font-family: "Verdana", serif;
+}
+
+h2 {
+    font-family: "Verdana", serif;
+}
+
+p {
+    font-family: "Verdana", serif;
+}
